@@ -17,12 +17,13 @@
                 <h1>Daniel Parker</h1>
             </div>
             <div class="dropdown">
-                <button class="dropbtn"> = Menu</button>
+                <button class="dropbtn" id = "nav"> = Menu</button>
                 <div class="dropdown-content">
                     <a href="index.html">Home</a>
                     <a href="wwr/index.html">WWR</a>
                     <a href="ice.html">ICE</a>
                     <a href="aboutme.html">About me</a>
+                    <a href="clientReport.html">Project</a>
                 </div>
             </div> 
         </aside>
@@ -78,5 +79,16 @@
         </main>
     </div>
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => 
+            {
+                document.getElementsByID("nav").innerHTML = data;
+            })
+    })
+</script>
 
 </html>
